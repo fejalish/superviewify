@@ -13,6 +13,11 @@ module.exports = function (file, options) {
   }
 
   return through(function (buf, enc, next) {
+    //contents of buf after watchify are previous superviews output
+    //reading file each time to make sure get proper contents with no error
+    //probably an easier way to do this but nuking it for now...
+    var b = fs.readFileSync(file);
+    buf = b;
     var name = options && options.name ? options.name : 'description'
     var args = options && options.args ? options.args : 'data'
     var idom = options && options.insertidom ? options.insertidom : true
