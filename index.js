@@ -1,3 +1,4 @@
+var fs = require('fs')
 var through = require('through2')
 var superviews = require('superviews.js')
 var header = 'var IncrementalDOM = require(\'incremental-dom\')\n' +

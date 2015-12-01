@@ -25,10 +25,10 @@
   "dependencies": {
     "superviews.js": "^0.0.8",
     "through2": "^2.0.0"
+    "fs": "0.0.2",
   },
   "devDependencies": {
     "browserify": "^11.0.1",
-    "fs": "0.0.2",
     "incremental-dom": "git+https://github.com/davidjamesstone/incremental-dom.git"
   }
 }
